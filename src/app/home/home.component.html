@@ -1,0 +1,45 @@
+<!-- Container for sidenav and page content -->
+<ng-sidebar-container>
+
+  <!-- Sidenav -->
+  <!-- Can be closed by click on backdrop, esc key and click outside -->
+  <ng-sidebar mode="push" keyClose="true" closeOnClickBackdrop="true" closeOnClickOutside="true"
+    [(opened)]="openedSideNav" class="sidenavStyling">
+    <div class="insideSideNav">
+      <div>
+        <p>this is hi</p>
+      </div>
+
+    </div>
+  </ng-sidebar>
+
+  <!-- Sidenav contents -->
+  <div ng-sidebar-content>
+    <div class="container">
+
+
+
+
+      <!-- Hamburger sidenav for closing and opening sidenav -->
+      <div *ngIf="openedSideNav === true">
+        <div (click)="toggleSidenav()">
+          <img class="bear" src="../../assets/icons/gummy-bear.png">
+        </div>
+      </div>
+      <div *ngIf="openedSideNav === false">
+        <div (click)="toggleSidenav()">
+          <img class="bear" src="../../assets/icons/gummy-bear-green.png">
+        </div>
+      </div>
+
+      <div class="title">
+        <h1>Bearbnb</h1>
+        <p class="whyTitle">why not stay at home?</p>
+      </div>
+
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+</ng-sidebar-container>

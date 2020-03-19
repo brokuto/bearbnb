@@ -1,0 +1,45 @@
+@import '../../styles.scss';
+
+.whyTitle {
+  margin-top: -12px;
+  margin-left: 7px;
+  text-shadow: 4px 2px $cambridge-blue !important;
+}
+
+// Set height to the sidenav
+ng-sidebar-container {
+  height: 100vh;
+}
+
+// deep-styling of the sidenav to SDX standards
+::ng-deep aside,
+.ng-sidebar {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  pointer-events: auto;
+  position: absolute;
+  touch-action: auto;
+  will-change: initial;
+  z-index: 2;
+  background: $carmine-pink !important;
+  padding: 40px;
+  padding-right: 90px;
+}
+
+.insideSideNav p {
+  color: $crayola !important;
+}
+
+.title {
+  margin-top: -70px;
+  margin-left: 75px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.bear {
+  height: 70px;
+  cursor: pointer;
+}
