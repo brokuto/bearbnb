@@ -2,16 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { SidebarModule } from 'ng-sidebar';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BaseComponent } from './base/base/base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BaseComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     SidebarModule.forRoot()
   ],
   providers: [],
