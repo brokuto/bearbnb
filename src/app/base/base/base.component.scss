@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../../styles.scss';
 
 .whyTitle {
   margin-top: -12px;
@@ -23,7 +23,7 @@ ng-sidebar-container {
   z-index: 2;
   background: $carmine-pink !important;
   padding: 40px;
-  padding-right: 90px;
+  padding-right: 40px;
 }
 
 .insideSideNav p {
@@ -42,4 +42,17 @@ ng-sidebar-container {
 .bear {
   height: 70px;
   cursor: pointer;
+}
+
+.ulSidenav {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.bears {
+  color: $crayola;
+}
+.bears:hover {
+  color: $deeptaupe;
+  transition: 0.5s ease;
 }

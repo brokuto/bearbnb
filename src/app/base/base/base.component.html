@@ -6,8 +6,19 @@
   <ng-sidebar mode="push" keyClose="true" closeOnClickBackdrop="true" closeOnClickOutside="true"
     [(opened)]="openedSideNav" class="sidenavStyling">
     <div class="insideSideNav">
+
       <div>
-        <p>this is hi</p>
+        <ul class="ulSidenav">
+          <li>
+            <a routerLink="/about">about Bearbnb</a>
+          </li>
+          <li>
+            <a href="">legal hold</a>
+          </li>
+        </ul>
+        <br>
+
+        <p>made with &#10084; from the <a href="https://github.com/brokuto" target="_blank" class="bears">bears</a></p>
       </div>
 
     </div>
@@ -17,29 +28,31 @@
   <div ng-sidebar-content>
     <div class="container">
 
-
-
-
       <!-- Hamburger sidenav for closing and opening sidenav -->
       <div *ngIf="openedSideNav === true">
         <div (click)="toggleSidenav()">
-          <img class="bear" src="../../assets/icons/gummy-bear.png">
+          <img class="bear" src="../../../assets/icons/gummy-bear.png">
         </div>
       </div>
       <div *ngIf="openedSideNav === false">
         <div (click)="toggleSidenav()">
-          <img class="bear" src="../../assets/icons/gummy-bear-green.png">
+          <img class="bear" src="../../../assets/icons/gummy-bear-green.png">
         </div>
       </div>
 
       <div class="title">
-        <h1>Bearbnb</h1>
+        <h1 routerLink="/home">Bearbnb</h1>
         <p class="whyTitle">why not stay at home?</p>
       </div>
 
       <div class="container">
 
+        <div *ngIf="router.url == '/about'">
+          <app-about></app-about>
+        </div>
+
       </div>
+
     </div>
   </div>
 </ng-sidebar-container>
