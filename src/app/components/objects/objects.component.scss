@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+
+.container {
+  margin: 40px;
+}
+
+.cardsContainer {
+    height: 90vh;
+}
+
+.cardCursor {
+  cursor: pointer;
+}
+
+.cardImgs {
+  max-height: 601px;
+}
+
+.uk-child-width-1-2\@m>* {
+  width: 30%;
+}
