@@ -10,6 +10,10 @@
       <div>
         <ul class="ulSidenav">
           <li>
+            <a routerLink="/rent">browse rentable rooms</a>
+          </li>
+          <br>
+          <li>
             <a routerLink="/about">about Bearbnb</a>
           </li>
           <li>
@@ -49,6 +53,9 @@
 
         <div *ngIf="router.url == '/about'">
           <app-about></app-about>
+        </div>
+        <div *ngIf="router.url == '/rent'">
+          <app-objects></app-objects>
         </div>
 
       </div>
