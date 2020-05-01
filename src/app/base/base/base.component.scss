@@ -52,7 +52,20 @@ ng-sidebar-container {
 .bears {
   color: $crayola;
 }
+
 .bears:hover {
   color: $deeptaupe;
   transition: 0.5s ease;
+}
+
+.login {
+  top: 18px;
+  position: absolute;
+  right: 0;
+  margin-right: 2vh;
+}
+
+.login a:hover {
+  text-decoration: none;
+  color: $carmine-pink;
 }
