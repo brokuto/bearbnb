@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+.loginCard {
+  margin: auto 0;
+  align-self: center;
+}
+
+button {
+  background-color: $crayola;
+}
+
+button:hover {
+  background-color: $deeptaupe;
+}

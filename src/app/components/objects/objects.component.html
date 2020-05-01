@@ -1,12 +1,25 @@
 <div class="container">
   <h2>Browse our rentable rooms</h2>
-
   <br>
+
+
+  <div *ngIf="openModal === true">
+    
+
+    <div class="openModal">
+      <a (click)="openModal = false" class="closeIcon" uk-icon="close"></a>
+      <h2>Rent room number <h1 class="roomNumber">{{ modalId }}</h1></h2>
+
+      
+    </div>
+    <div class="backdrop"></div>
+  </div>
+
 
   <div class="cardsContainer">
     <div class="uk-child-width-1-2@m" uk-grid>
       <div>
-        <div class="cardCursor uk-card uk-card-default">
+        <div id="1" (click)="getId(1)" class="cardCursor uk-card uk-card-default">
           <div class="uk-card-media-top">
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
@@ -18,7 +31,7 @@
       </div>
 
       <div>
-        <div class="cardCursor uk-card uk-card-default">
+        <div id="2" (click)="getId(2)" class="cardCursor uk-card uk-card-default">
           <div class="uk-card-media-top">
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
@@ -30,7 +43,7 @@
       </div>
 
       <div>
-        <div class="cardCursor uk-card uk-card-default">
+        <div id="3" (click)="getId(3)" class="cardCursor uk-card uk-card-default">
           <div class="uk-card-media-top">
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
@@ -42,7 +55,7 @@
       </div>
 
       <div>
-        <div class="cardCursor uk-card uk-card-default">
+        <div id="4" (click)="getId(4)" class="cardCursor uk-card uk-card-default">
           <div class="uk-card-media-top">
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
@@ -54,7 +67,7 @@
       </div>
 
       <div>
-        <div class="cardCursor uk-card uk-card-default">
+        <div id="5" (click)="getId(5)" class="cardCursor uk-card uk-card-default">
           <div class="uk-card-media-top">
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
@@ -69,6 +82,9 @@
     <br>
     <br>
   </div>
+
+
+
 
 
 </div>

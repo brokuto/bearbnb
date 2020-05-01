@@ -1,4 +1,4 @@
-<app-base></app-base>
+<app-base *ngIf="router.url != '/login'"></app-base>
 <!-- Components/Content -->
 <div class="content">
   <router-outlet></router-outlet>
