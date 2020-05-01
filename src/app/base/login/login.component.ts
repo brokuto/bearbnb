@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   errorMessage: string = '';
-  siteKey = '6Lcp6aMUAAAAAB1lFkq3JC3jJjdS2FpO9CTJBQ3W';
+  siteKey = '6LfFAfEUAAAAALNARPa8X8iVcEK_XmOC8Kp1s2zv';
 
   constructor(
     public authService: AuthService,
