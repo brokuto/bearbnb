@@ -2,10 +2,36 @@
   <h2>Browse our rentable rooms</h2>
   <br>
 
+  <!-- renting modal -->
+  <div *ngIf="openRentModal === true">
+    <div class="openRentModal">
+      <a (click)="openModal = false" class="closeIcon" uk-icon="close"></a>
 
+      <h2>select date</h2>
+      <form [formGroup]="rentForm">
+        <fieldset class="uk-fieldset">
+          <div class="datePicker">
+            <div class="uk-margin form-group">
+              <label class="uk-form-label" for="form-stacked-text">from</label>
+              <input #fromDate class="uk-input" type="date" formControlName="fromDate">
+            </div>
+
+            <div class="uk-margin form-group">
+              <label class="uk-form-label" for="form-stacked-text">to</label>
+              <input #toDate class="uk-input" type="date" formControlName="toDate">
+            </div>
+          </div>
+
+        </fieldset>
+        <br>
+        <button (click)="rent(fromDate.value, toDate.value)" class="uk-button uk-button-default">Rent</button>
+      </form>
+    </div>
+    <div class="backdrop2" (click)="openModal = false; openRentModal = false"></div>
+  </div>
+
+  <!-- modal -->
   <div *ngIf="openModal === true">
-
-
     <div class="openModal">
       <a (click)="openModal = false" class="closeIcon" uk-icon="close"></a>
       <h2>Rent room number <h1 class="roomNumber">{{ modalId }}</h1>
@@ -14,7 +40,6 @@
       <div *ngIf="modalId === 1">
         <h3>The flower room</h3>
         <br>
-
         <!-- slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
           <ul class="roomSlider uk-slider-items uk-grid">
@@ -51,13 +76,23 @@
             uk-slider-item="next"></a>
         </div>
         <!-- slider end -->
+        <br>
+        <br>
+
+        <div>
+          <h4>Description</h4>
+          <p>A room full of flowers and spring vibes. Excellent for the bears that want to relax a little.</p>
+          <br>
+          <h4>Price</h4>
+          <span>100.- per night</span><span class="rentNow" (click)="rentModal(1)">&larr; Rent now</span>
+        </div>
+
 
       </div>
 
       <div *ngIf="modalId === 2">
         <h3>The honey room</h3>
         <br>
-
         <!-- slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
           <ul class="roomSlider uk-slider-items uk-grid">
@@ -94,13 +129,22 @@
             uk-slider-item="next"></a>
         </div>
         <!-- slider end -->
+        <br>
+        <br>
+
+        <div>
+          <h4>Description</h4>
+          <p>A room full of sweet and nutricious honey. Excellent for the sweet bears.</p>
+          <br>
+          <h4>Price</h4>
+          <span>200.- per night</span><span class="rentNow" (click)="rentModal(2)">&larr; Rent now</span>
+        </div>
 
       </div>
 
       <div *ngIf="modalId === 3">
         <h3>The fish room</h3>
         <br>
-
         <!-- slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
           <ul class="roomSlider uk-slider-items uk-grid">
@@ -137,13 +181,23 @@
             uk-slider-item="next"></a>
         </div>
         <!-- slider end -->
+        <br>
+        <br>
+
+        <div>
+          <h4>Description</h4>
+          <p>A room full of vibrantly colored sea fish. Excellent for all the bears that need a little bit color in
+            their life right now.</p>
+          <br>
+          <h4>Price</h4>
+          <span>450.- per night</span><span class="rentNow" (click)="rentModal(3)">&larr; Rent now</span>
+        </div>
 
       </div>
 
       <div *ngIf="modalId === 4">
         <h3>The tree room</h3>
         <br>
-
         <!-- slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
           <ul class="roomSlider uk-slider-items uk-grid">
@@ -180,12 +234,23 @@
             uk-slider-item="next"></a>
         </div>
         <!-- slider end -->
+        <br>
+        <br>
+
+        <div>
+          <h4>Description</h4>
+          <p>A room full of high to the sky trees like in a forest. Excellent for the bears that seek a little time
+            alone.</p>
+          <br>
+          <h4>Price</h4>
+          <span>10.- per night</span><span class="rentNow" (click)="rentModal(4)">&larr; Rent now</span>
+        </div>
+
       </div>
 
       <div *ngIf="modalId === 5">
         <h3>The pillow room</h3>
         <br>
-
         <!-- slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
           <ul class="roomSlider uk-slider-items uk-grid">
@@ -222,13 +287,24 @@
             uk-slider-item="next"></a>
         </div>
         <!-- slider end -->
+        <br>
+        <br>
+
+        <div>
+          <h4>Description</h4>
+          <p>A room full of freshly washed and fluffy pillows. Excellent for the bears that just are a little bit too
+            tired to do anything else today.</p>
+          <span><span>500.-</span> per night</span><span class="rentNow" (click)="rentModal(5)">&larr; Rent now</span>
+        </div>
+
       </div>
 
     </div>
-    <div class="backdrop" (click)="openModal = false"></div>
+    <div class="backdrop" (click)="openModal = false; openRentModal = false"></div>
   </div>
+  <!-- modal end -->
 
-
+  <!-- rentable objects -->
   <div class="cardsContainer">
     <div class="uk-child-width-1-2@m" uk-grid>
       <div>
@@ -237,8 +313,8 @@
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
           <div class="uk-card-body uk-card-hover uk-card">
-            <h3 class="uk-card-title">Rentabale item 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Rentable room 1 &#123; <span class="roomTitle">Flower room</span> &#125;</h3>
+            <p>A room full of flowers and spring vibes. Excellent for the bears that want to relax a little.</p>
           </div>
         </div>
       </div>
@@ -249,8 +325,8 @@
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
           <div class="uk-card-body uk-card-hover uk-card">
-            <h3 class="uk-card-title">Rentabale item 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Rentable room 2 &#123; <span class="roomTitle">Honey room</span> &#125;</h3>
+            <p>A room full of sweet and nutricious honey. Excellent for the sweet bears.</p>
           </div>
         </div>
       </div>
@@ -261,8 +337,9 @@
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
           <div class="uk-card-body uk-card-hover uk-card">
-            <h3 class="uk-card-title">Rentabale item 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Rentable room 3 &#123; <span class="roomTitle">Fish room</span> &#125;</h3>
+            <p>A room full of vibrantly colored sea fish. Excellent for all the bears that need a little bit color in
+              their life right now.</p>
           </div>
         </div>
       </div>
@@ -273,8 +350,9 @@
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
           <div class="uk-card-body uk-card-hover uk-card">
-            <h3 class="uk-card-title">Rentabale item 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Rentable room 4 &#123; <span class="roomTitle">Tree room</span> &#125;</h3>
+            <p>A room full of high to the sky trees like in a forest. Excellent for the bears that seek a little time
+              alone.</p>
           </div>
         </div>
       </div>
@@ -285,8 +363,9 @@
             <img class="cardImgs" src="../../../assets/img/koala.jpg" alt="">
           </div>
           <div class="uk-card-body uk-card-hover uk-card">
-            <h3 class="uk-card-title">Rentabale item 5</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Rentable room 5 &#123; <span class="roomTitle">Pillow room</span> &#125;</h3>
+            <p>A room full of freshly washed and fluffy pillows. Excellent for the bears that just are a little bit too
+              tired to do anything else today.</p>
           </div>
         </div>
       </div>
@@ -295,9 +374,5 @@
     <br>
     <br>
   </div>
-
-
-
-
-
+  <!-- objects end -->
 </div>
