@@ -45,19 +45,32 @@
       </div>
 
       <div class="title">
-        <h1 routerLink="/home">Bearbnb</h1>
+        <h1 routerLink="/rent">Bearbnb</h1>
         <p class="whyTitle">why not stay at home?</p>
       </div>
 
-      <div class="container">
+      <div class="login">
+        <!-- <h4>{{user.name}}</h4> -->
+        <!-- <h4>
+          <a routerLink="/login">
+            Login
+          </a>
+        </h4> -->
 
+        <h4>
+          <a (click)="logout()">
+            Logout
+          </a>
+        </h4>
+      </div>
+
+      <div class="container">
         <div *ngIf="router.url == '/about'">
           <app-about></app-about>
         </div>
         <div *ngIf="router.url == '/rent'">
           <app-objects></app-objects>
         </div>
-
       </div>
 
     </div>

@@ -1,8 +1,8 @@
-<div class="loginCard uk-card uk-card-default uk-card-body uk-width-1-2@m">
-  <form [formGroup]="loginForm">
+<div class="registerCard uk-card uk-card-default uk-card-body uk-width-1-2@m">
+  <form [formGroup]="registerForm">
     <fieldset class="uk-fieldset">
 
-      <legend class="uk-legend">Login</legend>
+      <legend class="uk-legend">Register</legend>
 
       <div class="uk-margin form-group">
         <input type="email" formControlName="email" class="uk-input" type="text" placeholder="E-Mail">
@@ -11,6 +11,7 @@
       <div class="uk-margin form-group">
         <input type="password" class="uk-input" formControlName="password" type="password" placeholder="Password">
         <label class="error">{{errorMessage}}</label>
+        <label class="success">{{successMessage}}</label>
       </div>
       <br>
 
@@ -20,12 +21,11 @@
       </ngx-recaptcha2>
       <br>
 
-
-      <button type="submit" (click)="tryLogin(loginForm.value)"
-        class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Login</button>
+      <button type="submit" (click)="tryRegister(registerForm.value)"
+        class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Register</button>
 
       <div class="uk-margin form-group">
-        <p>No account yet? <a routerLink="/register">Create an account</a></p>
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
       </div>
       <br>
 
@@ -35,11 +35,11 @@
 </div>
 
 
-<!-- <h1 class="header">Login with Firebase or Social Providers</h1>
-<div class="container">
+
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <form [formGroup]="loginForm">
+      <form [formGroup]="registerForm">
         <div class="form-group">
           <label>Email address</label>
           <input type="email" formControlName="email" class="form-control">
@@ -48,15 +48,16 @@
           <label>Password</label>
           <input type="password" class="form-control" formControlName="password">
           <label class="error">{{errorMessage}}</label>
+          <label class="success">{{successMessage}}</label>
         </div>
-        <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Login</button>
+        <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-default">Register</button>
       </form>
     </div>
   </div>
- 
+
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <p>No account yet? <a routerLink="/register">Create an account</a></p>
+      <p>Already have an account? <a routerLink="/login">Login</a></p>
     </div>
   </div>
 </div> -->
