@@ -4,15 +4,228 @@
 
 
   <div *ngIf="openModal === true">
-    
+
 
     <div class="openModal">
       <a (click)="openModal = false" class="closeIcon" uk-icon="close"></a>
-      <h2>Rent room number <h1 class="roomNumber">{{ modalId }}</h1></h2>
+      <h2>Rent room number <h1 class="roomNumber">{{ modalId }}</h1>
+      </h2>
 
-      
+      <div *ngIf="modalId === 1">
+        <h3>The flower room</h3>
+        <br>
+
+        <!-- slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <ul class="roomSlider uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/sakura.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/sakura.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/sakura.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/sakura.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/sakura.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+
+          <a class="arrowSlider uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slider-item="previous"></a>
+          <a class="arrowSlider uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slider-item="next"></a>
+        </div>
+        <!-- slider end -->
+
+      </div>
+
+      <div *ngIf="modalId === 2">
+        <h3>The honey room</h3>
+        <br>
+
+        <!-- slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <ul class="roomSlider uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/honey.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/honey.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/honey.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/honey.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/honey.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+
+          <a class="arrowSlider uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slider-item="previous"></a>
+          <a class="arrowSlider uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slider-item="next"></a>
+        </div>
+        <!-- slider end -->
+
+      </div>
+
+      <div *ngIf="modalId === 3">
+        <h3>The fish room</h3>
+        <br>
+
+        <!-- slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <ul class="roomSlider uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/fish.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/fish.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/fish.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/fish.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/fish.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+
+          <a class="arrowSlider uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slider-item="previous"></a>
+          <a class="arrowSlider uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slider-item="next"></a>
+        </div>
+        <!-- slider end -->
+
+      </div>
+
+      <div *ngIf="modalId === 4">
+        <h3>The tree room</h3>
+        <br>
+
+        <!-- slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <ul class="roomSlider uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/tree.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/tree.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/tree.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/tree.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/tree.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+
+          <a class="arrowSlider uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slider-item="previous"></a>
+          <a class="arrowSlider uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slider-item="next"></a>
+        </div>
+        <!-- slider end -->
+      </div>
+
+      <div *ngIf="modalId === 5">
+        <h3>The pillow room</h3>
+        <br>
+
+        <!-- slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <ul class="roomSlider uk-slider-items uk-grid">
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/pillows.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/pillows.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/pillows.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/pillows.jpg" alt="">
+              </div>
+            </li>
+            <li class="uk-width-3-4">
+              <div class="uk-panel">
+                <img src="../../../assets/img/pillows.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+
+          <a class="arrowSlider uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slider-item="previous"></a>
+          <a class="arrowSlider uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slider-item="next"></a>
+        </div>
+        <!-- slider end -->
+      </div>
+
     </div>
-    <div class="backdrop"></div>
+    <div class="backdrop" (click)="openModal = false"></div>
   </div>
 
 
