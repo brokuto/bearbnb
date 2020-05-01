@@ -8,6 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BaseComponent } from './base/base/base.component';
 import { ObjectsComponent } from './components/objects/objects.component';
+import { LoginComponent } from './base/login/login.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,16 @@ import { ObjectsComponent } from './components/objects/objects.component';
     HomeComponent,
     BaseComponent,
     AboutComponent,
-    ObjectsComponent
+    ObjectsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
