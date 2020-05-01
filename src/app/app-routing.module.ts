@@ -8,7 +8,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { RegisterComponent } from './base/register/register.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
   // Only Users verified by the AuthGuard can access this page
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
